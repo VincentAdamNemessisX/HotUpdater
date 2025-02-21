@@ -6,4 +6,4 @@ def sum_fibonacci(n: int):
     for _ in range(n):
         total += a 
         a, b = b, a + b 
-    return total * 15
+    return total * 2

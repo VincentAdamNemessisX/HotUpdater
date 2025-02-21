@@ -1,8 +1,8 @@
 # test_module.py  
 import os
 import time
-from module.hot_reloader import AdvancedHotReloader  # 引用前文实现的热重载系统
-from module import write  # 引用前文实现的业务逻辑
+from modules.hot_reloader import AdvancedHotReloader  # 引用前文实现的热重载系统
+from modules import write  # 引用前文实现的业务逻辑
 
 data_path = os.path.abspath("stg/data.txt")
 
@@ -41,7 +41,7 @@ class Test:
 
 if __name__ == "__main__":
     # 配置项目根目录
-    PROJECT_ROOT = os.path.abspath("C:/Users/zhaotx/PycharmProjects/HotUpdate")
+    PROJECT_ROOT = os.path.abspath(".")
 
     # 初始化系统
     reloader = AdvancedHotReloader(PROJECT_ROOT)
