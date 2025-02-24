@@ -232,7 +232,7 @@ class AdvancedHotReloader:
         for name in dir(module):
             new_func = getattr(module, name)
             if isinstance(new_func, types.FunctionType):
-                old_func = globals().get(name, None)
+                old_func = globals().get(name)
                 if old_func and old_func.__code__ != new_func.__code__:
                     for callback in self.function_registry.get(old_func, set()):
                         callback.__code__ = new_func.__code__
